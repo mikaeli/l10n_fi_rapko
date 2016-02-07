@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!--
+        NOTE: Immediate and 30 day payment terms are defined already in Odoo account-addon.
+        -->
+
+
+        <!--
+        Add standard Finnish 14 day payment term.
+        -->
+
+
+        <record id="account_payment_term_14days" model="account.payment.term">
+            <field name="name">14 Days</field>
+            <field name="note">14 Days</field>
+        </record>
+
+        <record id="account_payment_term_line_14days" model="account.payment.term.line">
+            <field name="value">balance</field>
+            <field eval="14" name="days"/>
+            <field eval="0" name="days2"/>
+            <field eval="account_payment_term_14days" name="payment_id"/>
+        </record>
+
+
+        <!--
+        Add 7 day payment term for suspicious customers
+        -->
+
+
+        <record id="account_payment_term_7days" model="account.payment.term">
+            <field name="name">7 Days</field>
+            <field name="note">7 Days</field>
+        </record>
+
+        <record id="account_payment_term_line_7days" model="account.payment.term.line">
+            <field name="value">balance</field>
+            <field eval="7" name="days"/>
+            <field eval="0" name="days2"/>
+            <field eval="account_payment_term_7days" name="payment_id"/>
+        </record>
+
+    </data>
+</openerp>

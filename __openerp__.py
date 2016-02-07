@@ -46,6 +46,7 @@
         "data/chart_of_accounts.xml",
         "data/taxes.xml",
         "data/fiscal_positions.xml",
+        "data/payment_terms.xml",
         "views/fiscal_position.xml",
         "views/invoice.xml",
     ],
