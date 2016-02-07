@@ -92,7 +92,7 @@
             <field name="sequence">60</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="name">Purchase VAT 10 %</field>
-            <field name="amount">0.9</field>
+            <field name="amount">0.1</field>
             <field name="type">percent</field>
             <field name="account_collected_id" ref="a1762"/>
             <field name="account_paid_id" ref="a1762"/>
