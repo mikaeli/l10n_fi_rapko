@@ -35,9 +35,11 @@
             <field name="name">Ostot yhteens&#228;</field>
         </record>
 
-        
+
+
         <!--=== ON REPORT ===-->
-        
+
+
         <!-- Payable / deductible -->
         <record model="account.tax.code.template" id="tax_code_pay_deduct">
             <field name="code">308</field>
@@ -307,6 +309,32 @@
             <field name="notprintable">True</field>
             <field name="parent_id" ref="tax_code_deductible"/>
             <field name="name">Ostojen verot yhteis&#246;</field>
+        </record>
+
+
+        <!-- VAT EXEMPT (for informal purchase, not to be reported in VAT reports -->
+        <record model="account.tax.code.template" id="vat_exempt_code_base">
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_root"/>
+            <field name="name">ALV Vapaat (ei raportoida ALV-raportissa)</field>
+        </record>
+
+
+        <!-- VAT Exempt Sales Base -->
+        <record model="account.tax.code.template" id="tax_code_base_sales_vatexempt">
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="vat_exempt_code_base"/>
+            <field name="name">ALV-vapaat myynnit</field>
+        </record>
+
+        <!-- VAT Exempt Purchase Base -->
+        <record model="account.tax.code.template" id="tax_code_base_purchase_vatexempt">
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="vat_exempt_code_base"/>
+            <field name="name">ALV-vapaat ostot</field>
         </record>
 
     </data>

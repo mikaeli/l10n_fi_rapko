@@ -4299,6 +4299,13 @@
             <field name="user_type" ref="account.data_account_type_income"/>
             <field name="parent_id" ref="a300"/>
         </record>
+        <record model="account.account.template" id="a300050">
+            <field name="name">ALV-vapaa myynti</field>
+            <field name="code">300050</field>
+            <field name="type">other</field>
+            <field name="user_type" ref="account.data_account_type_income"/>
+            <field name="parent_id" ref="a300"/>
+        </record>
         <record model="account.account.template" id="a300100">
             <field name="name">Oheispalvelut</field>
             <field name="code">300100</field>
