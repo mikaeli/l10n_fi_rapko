@@ -42,5 +42,17 @@
             <field eval="account_payment_term_7days" name="payment_id"/>
         </record>
 
+
+        <!--
+        Set default payment term for new customers
+        -->
+
+         <record id="payment_term_default_14" model="ir.property">
+         <field name="name">property_payment_term</field>
+         <field name="fields_id" search="[('model','=','res.partner'),('name','=','property_payment_term')]" />
+         <field name="value">account.payment.term,4</field>
+         </record>
     </data>
+
+
 </openerp>
